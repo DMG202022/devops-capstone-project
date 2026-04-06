@@ -38,6 +38,6 @@ jobs:
           flake8 service --count --max-complexity=10 --max-line-length=127 --statistics
       - name: Run unit tests with Nose
         env:
-          DATABASE_URI: postgres://postgres:pgs3cr3t@localhost:5432/testdb
+          DATABASE_URI: postgresql://postgres:pgs3cr3t@localhost:5432/testdb
         run: |
           nosetests -v --with-spec --spec-color --with-coverage --cover-package=service
